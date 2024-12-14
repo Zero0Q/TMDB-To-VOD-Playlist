@@ -65,21 +65,6 @@ $movies_with_origin_country = 'US'; // TMDB search setting (with_origin_country)
 // Example: The value can be either true or false.
 $useRealDebrid = false; // Requires a real debrid private token added above.
 
-// Example function to filter only Real-Debrid links
-function filterRealDebridLinks($links) {
-    $realDebridLinks = [];
-    foreach ($links as $link) {
-        if (strpos($link, 'real-debrid.com') !== false) {
-            $realDebridLinks[] = $link; // Keep only Real-Debrid links
-        }
-    }
-    return $realDebridLinks;
-}
-
-// When fetching or processing links
-$allLinks = fetchLinks(); // Assume this function fetches all links
-$realDebridLinks = filterRealDebridLinks($allLinks);
-
 // Leave this setting as false if you aren't intending on using Premiumize links.
 // set it to true if you want to use premiumize when streaming torrents. 
 // Example: The value can be either true or false.
